@@ -53,7 +53,7 @@ else:
 
 # Génération du lien WhatsApp personnalisé
 lien = "https://les-footix-du-mercredi.streamlit.app"
-whatsapp_message = f"⚽ Les Footix du Mercredi - Futsal 20h ! Inscris-toi ici : {lien}"
+whatsapp_message = f"Les Footix du Mercredi - Futsal 20h15 ! Inscris-toi ici : {lien}"
 whatsapp_link = f"https://api.whatsapp.com/send?text={whatsapp_message}"
 
 st.markdown(f"[📲 Partager sur WhatsApp]({whatsapp_link})", unsafe_allow_html=True)
