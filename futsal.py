@@ -1,5 +1,6 @@
 import streamlit as st
 import sqlite3
+import pandas as pd
 
 # Connexion à la base SQLite
 conn = sqlite3.connect("joueurs.db", check_same_thread=False)
@@ -23,11 +24,16 @@ st.markdown("""
             font-weight: bold;
             border-radius: 10px;
         }
+        .blue-title {
+            color: blue;
+            font-size: 24px;
+            font-weight: bold;
+        }
     </style>
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽ Les Footix du Mercredi 20h15")
+st.title("⚽ Les Footix du Mercredi - Inscription Futsal 20h15")
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
@@ -52,11 +58,15 @@ if st.button("S'inscrire"):
         else:
             st.error("Le nombre maximum de joueurs est atteint !")
 
-
 # Affichage des joueurs inscrits avec indexation à partir de 1
-st.write("### Joueurs inscrits :")
-for i, joueur in enumerate(joueurs, start=1):
-    st.write(f"{i}. {joueur}")
+st.markdown("<div class='blue-title'>Joueurs inscrits :</div>", unsafe_allow_html=True)
+
+df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
+st.dataframe(df_joueurs.style.set_properties(**{'color': 'blue'}))
+
+# Insérer 10 lignes vides
+for _ in range(10):
+    st.text("")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
@@ -79,7 +89,6 @@ if st.button("Réinitialiser la session"):
         st.success("Nouvelle session démarrée, toutes les inscriptions ont été réinitialisées.")
     else:
         st.error("Mot de passe incorrect")
-
 
 # Fermeture de la connexion
 conn.close()
