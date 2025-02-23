@@ -32,7 +32,7 @@ st.markdown("""
         body {
             background: url('https://raw.githubusercontent.com/nicolas-verdy/FUTSAL/main/background_filigrane.jpg') no-repeat center center fixed;
             background-size: cover;
-            opacity: 0.2;
+            opacity: 0.9;
         }
     </style>
     <div class="title"></div>
