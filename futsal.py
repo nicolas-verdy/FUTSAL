@@ -38,7 +38,8 @@ st.markdown("""
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽ Les Footix du Mercredi  RDV=20H       KickOff=20h15")
+st.title("⚽ Les Footix du Mercredi")
+st.title("RDV=20H      KickOff=20h15")
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
