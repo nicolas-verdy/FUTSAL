@@ -30,7 +30,7 @@ st.markdown("""
             font-weight: bold;
         }
         body {
-            background: url('https://raw.githubusercontent.com/nicolas-verdy/FUTSAL/main/background_filigrane.jpg') no-repeat center center fixed;
+            background: url('https://media1.thehungryjpeg.com/thumbs2/800_3750103_jvkbbmituzijjjbj9ro0waaudf7n91j6k7vnjdsx_soccer-ball-in-net-vector-hitting-goal-sport-poster-banner-brochure-design-element-isolated-on-transparent-background-illustration.jpg') no-repeat center center fixed;
             background-size: cover;
             opacity: 0.9;
         }
