@@ -32,7 +32,7 @@ st.markdown("""
         body {
             background: url('https://as2.ftcdn.net/v2/jpg/04/38/38/31/1000_F_438383177_nA6RK5X5UDGj6PXWfXG9ceqR28sF3hlg.jpg') no-repeat center center fixed;
             background-size: cover;
-            opacity: 0.5;
+            opacity: 0.3;
         }
     </style>
     <div class="title"></div>
