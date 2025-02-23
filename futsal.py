@@ -10,7 +10,7 @@ cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS joueurs (nom TEXT UNIQUE)")
 conn.commit()
 
-# Affichage de l'image en bandeau
+# Affichage de l'image en bandeau et en arrière-plan
 st.markdown("""
     <style>
         .title {
@@ -28,6 +28,11 @@ st.markdown("""
             color: blue;
             font-size: 24px;
             font-weight: bold;
+        }
+        body {
+            background: url('https://raw.githubusercontent.com/nicolas-verdy/FUTSAL/main/background_filigrane.jpg') no-repeat center center fixed;
+            background-size: cover;
+            opacity: 0.5;
         }
     </style>
     <div class="title"></div>
@@ -89,6 +94,10 @@ if st.button("Réinitialiser la session"):
         st.success("Nouvelle session démarrée, toutes les inscriptions ont été réinitialisées.")
     else:
         st.error("Mot de passe incorrect")
+
+# Fermeture de la connexion
+conn.close()
+
 
 # Fermeture de la connexion
 conn.close()
