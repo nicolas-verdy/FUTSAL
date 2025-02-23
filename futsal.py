@@ -27,7 +27,7 @@ st.markdown("""
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽ Les Footix du Mercredi - Inscription Futsal 20h15")
+st.title("⚽ Les Footix du Mercredi 20h15")
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
@@ -52,6 +52,12 @@ if st.button("S'inscrire"):
         else:
             st.error("Le nombre maximum de joueurs est atteint !")
 
+
+# Affichage des joueurs inscrits avec indexation à partir de 1
+st.write("### Joueurs inscrits :")
+for i, joueur in enumerate(joueurs, start=1):
+    st.write(f"{i}. {joueur}")
+
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
 joueur_a_supprimer = st.selectbox("Sélectionner un joueur", [""] + joueurs)
@@ -74,10 +80,6 @@ if st.button("Réinitialiser la session"):
     else:
         st.error("Mot de passe incorrect")
 
-# Affichage des joueurs inscrits avec indexation à partir de 1
-st.write("### Joueurs inscrits :")
-for i, joueur in enumerate(joueurs, start=1):
-    st.write(f"{i}. {joueur}")
 
 # Fermeture de la connexion
 conn.close()
