@@ -32,7 +32,7 @@ st.markdown("""
         body {
             background: url('https://img.freepik.com/vecteurs-libre/fond-football-abstrait-realiste_52683-67579.jpg') no-repeat center center fixed;
             background-size: cover;
-            opacity: 1;
+            opacity: 0.5;
         }
     </style>
     <div class="title"></div>
