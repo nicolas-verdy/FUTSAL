@@ -29,20 +29,32 @@ st.markdown("""
 
 st.title("⚽ Les Footix du Mercredi - Inscription Futsal 20h15")
 
+# Vérification du nombre de joueurs inscrits
+cursor.execute("SELECT nom FROM joueurs")
+joueurs = [row[0] for row in cursor.fetchall()]
+nombre_max = 10
+places_restantes = nombre_max - len(joueurs)
+
+# Affichage du nombre de places restantes
+st.markdown(f"## 🏆 Places restantes : {places_restantes} / {nombre_max}")
+
 # Formulaire d'inscription
 nom = st.text_input("Votre nom")
 if st.button("S'inscrire"):
     if nom:
-        try:
-            cursor.execute("INSERT INTO joueurs (nom) VALUES (?)", (nom,))
-            conn.commit()
-            st.success(f"{nom} inscrit avec succès !")
-        except sqlite3.IntegrityError:
-            st.warning("Ce joueur est déjà inscrit !")
+        if len(joueurs) < nombre_max:
+            try:
+                cursor.execute("INSERT INTO joueurs (nom) VALUES (?)", (nom,))
+                conn.commit()
+                st.success(f"{nom} inscrit avec succès !")
+            except sqlite3.IntegrityError:
+                st.warning("Ce joueur est déjà inscrit !")
+        else:
+            st.error("Le nombre maximum de joueurs est atteint !")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
-joueur_a_supprimer = st.selectbox("Sélectionner un joueur", [""] + [row[0] for row in cursor.execute("SELECT nom FROM joueurs").fetchall()])
+joueur_a_supprimer = st.selectbox("Sélectionner un joueur", [""] + joueurs)
 password = st.text_input("Mot de passe", type="password")
 if st.button("Supprimer"):
     if password == "Jules2014" and joueur_a_supprimer:
@@ -62,14 +74,12 @@ if st.button("Réinitialiser la session"):
     else:
         st.error("Mot de passe incorrect")
 
-# Affichage des joueurs inscrits
-cursor.execute("SELECT nom FROM joueurs")
-joueurs = [row[0] for row in cursor.fetchall()]
+# Affichage des joueurs inscrits avec indexation à partir de 1
 st.write("### Joueurs inscrits :")
-st.write(joueurs)
+for i, joueur in enumerate(joueurs, start=1):
+    st.write(f"{i}. {joueur}")
 
 # Fermeture de la connexion
 conn.close()
-
 
 #  streamlit run futsal.py
