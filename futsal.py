@@ -30,9 +30,9 @@ st.markdown("""
             font-weight: bold;
         }
         body {
-            background: url('https://media1.thehungryjpeg.com/thumbs2/800_3750103_jvkbbmituzijjjbj9ro0waaudf7n91j6k7vnjdsx_soccer-ball-in-net-vector-hitting-goal-sport-poster-banner-brochure-design-element-isolated-on-transparent-background-illustration.jpg') no-repeat center center fixed;
+            background: url('https://as2.ftcdn.net/v2/jpg/04/38/38/31/1000_F_438383177_nA6RK5X5UDGj6PXWfXG9ceqR28sF3hlg.jpg') no-repeat center center fixed;
             background-size: cover;
-            opacity: 0.9;
+            opacity: 0.5;
         }
     </style>
     <div class="title"></div>
