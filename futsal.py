@@ -67,7 +67,7 @@ if st.button("S'inscrire"):
 st.markdown("<div class='blue-title'>Joueurs inscrits :</div>", unsafe_allow_html=True)
 
 df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
-df = df_joueurs["#","Nom"]
+df = df_joueurs[['#', 'Nom']]
 st.dataframe(df.style.set_properties(**{'color': 'blue'}))
 
 # Insérer 10 lignes vides
