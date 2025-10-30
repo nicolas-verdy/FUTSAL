@@ -41,7 +41,7 @@ st.markdown("""
 st.title("⚽ Les Footix du Mercredi")
 st.title("RDV=20H      KickOff=20h15")
 
-st.title("🎥 Lien vers Vidéo du Mer 29/10/25")
+st.write("🎥 Lien vers la vidéo du Merc 29/10/25")
 st.write("https://drive.google.com/file/d/1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL/view?usp=sharing")
 
 
@@ -118,6 +118,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
