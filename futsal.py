@@ -40,7 +40,7 @@ st.markdown("""
 
 st.title("⚽ Les Footix du Mercredi")
 st.title("RDV=20H      KickOff=20h15")
-st.title("Oui Madjid, tu as bien lu, rdv 20h :o)   Et Dodo, ferme le mago a 19h, ca ira .. ")
+
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
@@ -115,4 +115,5 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
