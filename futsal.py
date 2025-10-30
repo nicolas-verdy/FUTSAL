@@ -42,7 +42,8 @@ st.title("⚽ Les Footix du Mercredi")
 st.title("RDV=20H      KickOff=20h15")
 
 st.title("🎥 Vidéo du Mer 29/10/25")
-st.video("https://drive.google.com/uc?export=download&id=1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL")
+st.video("https://drive.google.com/file/d/1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL/view?usp=sharing")
+
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
@@ -117,6 +118,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
