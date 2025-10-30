@@ -41,9 +41,8 @@ st.markdown("""
 st.title("⚽ Les Footix du Mercredi")
 st.title("RDV=20H      KickOff=20h15")
 
-st.title("🎥 Vidéo du Mer 29/10/25")
-st.video("https://drive.google.com/file/d/1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL/view?usp=sharing")
-st.title("https://drive.google.com/file/d/1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL/view?usp=sharing")
+st.title("🎥 Lien vers Vidéo du Mer 29/10/25")
+st.write("https://drive.google.com/file/d/1XuPIG7IT6XO1jikNEr6tdo_ocOYTPNaL/view?usp=sharing")
 
 
 # Vérification du nombre de joueurs inscrits
@@ -119,6 +118,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
