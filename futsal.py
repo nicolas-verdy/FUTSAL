@@ -88,13 +88,13 @@ components.html(map_iframe, height=500)
 for _ in range(10):
     st.text("")
 
-st.write("***RETOUR SUR LES DERNIERS MATCHES***")
+st.title("***RETOUR SUR LES DERNIERS MATCHES***")
 st.write(" ")
-st.title("MERCREDI 29/10/25")
+st.write("MERCREDI 29/10/25")
 st.write("(Zak,Stef,Dodo,Madjid,Guillaume)")
 st.write("14-20")
 st.write("(Vince,Mano,Nico,Yann,Halim)")
-st.title("La vidéo du match :")
+st.write("La vidéo du match :")
 st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
@@ -124,6 +124,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
