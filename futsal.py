@@ -38,7 +38,7 @@ st.markdown("""
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽ Les Footix du Mercredi")
+st.title("⚽⚽⚽ Les Footix ⚽⚽⚽")
 st.title("RDV=20H      KickOff=20h15")
 
 
@@ -49,7 +49,7 @@ nombre_max = 10
 places_restantes = nombre_max - len(joueurs)
 
 # Affichage du nombre de places restantes
-st.markdown(f"## 🏆 Places restantes : {places_restantes} / {nombre_max}")
+st.markdown(f"## 🏆 Places : {places_restantes} / {nombre_max}")
 
 # Formulaire d'inscription
 nom = st.text_input("Votre nom")
@@ -132,6 +132,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
