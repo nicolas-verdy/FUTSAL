@@ -72,7 +72,9 @@ df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
 df = df_joueurs[['#', 'Nom']]
 st.dataframe(df.style.set_properties(**{'color': 'blue'}))
 
-
+# Insérer 10 lignes vides
+for _ in range(10):
+    st.text("")
 
 st.title("***ARCHIVES***")
 st.write(" ")
@@ -85,8 +87,7 @@ st.write("La vidéo du match :")
 st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
 st.write("     *****      ")
 st.write(" ")
-st.write(" ")
-st.write(" ")
+
 
 # Affichage de l'adresse
 adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
@@ -131,6 +132,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
