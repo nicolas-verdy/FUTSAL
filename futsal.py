@@ -38,7 +38,7 @@ st.markdown("""
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽⚽⚽ Les Footix ⚽⚽⚽")
+st.title("⚽ Les Footix ⚽")
 st.title("RDV=20H      KickOff=20h15")
 
 
@@ -132,6 +132,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
