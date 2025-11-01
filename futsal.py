@@ -92,7 +92,7 @@ st.write("***Retour sur les dernières rencontres***")
 st.write(" ")
 st.write("Résultats du Merc 29/10/25")
 st.write("(Zak,Stef,Dodo,Madjid,Guillaume)  14 - 20  (Vince,Mano,Nico,Yann,Halim)")
-st.write("🎥"&"https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
+st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
@@ -121,6 +121,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
