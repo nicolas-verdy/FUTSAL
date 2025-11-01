@@ -41,9 +41,6 @@ st.markdown("""
 st.title("⚽ Les Footix du Mercredi")
 st.title("RDV=20H      KickOff=20h15")
 
-st.write("🎥 Lien vers la vidéo du Merc 29/10/25")
-st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
-
 
 # Vérification du nombre de joueurs inscrits
 cursor.execute("SELECT nom FROM joueurs")
@@ -91,6 +88,12 @@ components.html(map_iframe, height=500)
 for _ in range(10):
     st.text("")
 
+st.title("Retour sur les dernières rencontres")
+sy.write(" ")
+st.write("Résultats du Merc 29/10/25")
+st.write("(Zak,Stef,Dodo,Madjid,Guillaume)  14 - 20  (Vince,Mano,Nico,Yann,Halim)")
+st.write("🎥"&"https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
+
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
 joueur_a_supprimer = st.selectbox("Sélectionner un joueur", [""] + joueurs)
@@ -118,6 +121,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
