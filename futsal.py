@@ -88,8 +88,8 @@ components.html(map_iframe, height=500)
 for _ in range(10):
     st.text("")
 
-st.title("Retour sur les dernières rencontres")
-sy.write(" ")
+st.write("***Retour sur les dernières rencontres***")
+st.write(" ")
 st.write("Résultats du Merc 29/10/25")
 st.write("(Zak,Stef,Dodo,Madjid,Guillaume)  14 - 20  (Vince,Mano,Nico,Yann,Halim)")
 st.write("🎥"&"https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
@@ -121,6 +121,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
