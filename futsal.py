@@ -80,9 +80,9 @@ st.title("***ARCHIVES***")
 st.write(" ")
 st.write("     *****      ")
 st.write("**MERCREDI 29/10/25**")
-st.write("(Zak,Stef,Dodo,Madjid,Guillaume)")
-st.write("        <----- 14 à 20 -----> ")
-st.write("(Vince,Mano,Nico,Yann,Halim)")
+st.write("(14 --> Zak,Stef,Dodo,Madjid,Guillaume)")
+st.write("à")
+st.write("(20 --> Vince,Mano,Nico,Yann,Halim)")
 st.write("La vidéo du match :")
 st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
 st.write("     *****      ")
@@ -132,6 +132,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
