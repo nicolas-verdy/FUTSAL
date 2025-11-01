@@ -72,21 +72,7 @@ df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
 df = df_joueurs[['#', 'Nom']]
 st.dataframe(df.style.set_properties(**{'color': 'blue'}))
 
-# Affichage de l'adresse
-adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
-st.markdown(f"### Adresse : {adresse}")
 
-# Affichage de la carte Google Maps via iframe (avec l'adresse exacte)
-map_iframe = """
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4335253054123!2d3.1225587763705196!3d50.63979287371289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c329dfdbd2b16b%3A0xd255ea458f438532!2s8%20Rue%20du%20Frenelet%2C%2059650%20Villeneuve-d'Ascq!5e1!3m2!1sfr!2sfr!4v1742461795759!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-"""
-
-# Affichage de la carte dans Streamlit
-components.html(map_iframe, height=500)
-
-# Insérer 10 lignes vides
-for _ in range(10):
-    st.text("")
 
 st.title("***ARCHIVES***")
 st.write(" ")
@@ -102,6 +88,21 @@ st.write(" ")
 st.write(" ")
 st.write(" ")
 
+# Affichage de l'adresse
+adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
+st.markdown(f"### Adresse : {adresse}")
+
+# Affichage de la carte Google Maps via iframe (avec l'adresse exacte)
+map_iframe = """
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4335253054123!2d3.1225587763705196!3d50.63979287371289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c329dfdbd2b16b%3A0xd255ea458f438532!2s8%20Rue%20du%20Frenelet%2C%2059650%20Villeneuve-d'Ascq!5e1!3m2!1sfr!2sfr!4v1742461795759!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+"""
+
+# Affichage de la carte dans Streamlit
+components.html(map_iframe, height=500)
+
+# Insérer 10 lignes vides
+for _ in range(10):
+    st.text("")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
 st.write("### Supprimer un joueur (Organisateur uniquement)")
@@ -130,6 +131,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
