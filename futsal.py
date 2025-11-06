@@ -84,7 +84,7 @@ st.write("30    --> Mano, Stef, Yann, Charles, Carlos")
 st.write("à")
 st.write("18    --> Romain, Dodo, Nico, Zak, Alex")
 st.write("La vidéo du match :")
-st.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+st.write("https://drive.google.com/file/d/1j7aeRAz9jBo7EgzVZV0x8yDjF-Z_jxab/view?usp=drive_link")
 st.write("     *****      ")
 
 st.write("**MERCREDI 29/10/25**")
@@ -140,6 +140,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
