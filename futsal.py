@@ -79,6 +79,14 @@ for _ in range(10):
 st.title("***ARCHIVES***")
 st.write(" ")
 st.write("     *****      ")
+st.write("**MERCREDI 05/11/25**")
+st.write("30    --> Mano, Stef, Yann, Charles, Carlos")
+st.write("à")
+st.write("18    --> Romain, Dodo, Nico, Zak, Alex")
+st.write("La vidéo du match :")
+st.write("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
+st.write("     *****      ")
+
 st.write("**MERCREDI 29/10/25**")
 st.write("14    --> Zak, Stef, Dodo, Madjid, Guillaume")
 st.write("à")
@@ -101,8 +109,8 @@ map_iframe = """
 # Affichage de la carte dans Streamlit
 components.html(map_iframe, height=500)
 
-# Insérer 10 lignes vides
-for _ in range(10):
+# Insérer 3 lignes vides
+for _ in range(3):
     st.text("")
 
 # Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
@@ -132,6 +140,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
