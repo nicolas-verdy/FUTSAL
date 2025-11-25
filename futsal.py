@@ -78,6 +78,17 @@ for _ in range(10):
 
 st.title("***ARCHIVES***")
 st.write("     *****      ")
+st.write("**MERCREDI 26/11/25**")
+st.write("Foot annulé - 4 inscrits")
+st.write("Mano, Romain, Dodo, Raphaël")
+st.write("     *****      ")
+st.write("**MERCREDI 19/11/25**")
+st.write("26    --> Mano, Nico, Romain, Yann, Stéphane")
+st.write("à")
+st.write("16    --> Madjid, Alex, Fabien, Charles, Cyril")
+st.write("La vidéo du match :")
+st.write("PPAS DE VIDEO")
+st.write("     *****      ")
 st.write("**MERCREDI 12/11/25**")
 st.write("18    --> Mano, Dodo, Romain, Charles, Coco")
 st.write("à")
@@ -145,6 +156,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
