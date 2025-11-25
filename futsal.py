@@ -79,7 +79,7 @@ for _ in range(10):
 st.title("***ARCHIVES***")
 st.write("     *****      ")
 st.write("**MERCREDI 26/11/25**")
-st.write("Foot annulé - 4 inscrits")
+st.write("XXX Foot annulé XXX  - 4 inscrits")
 st.write("Mano, Romain, Dodo, Raphaël")
 st.write("     *****      ")
 st.write("**MERCREDI 19/11/25**")
@@ -156,6 +156,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
