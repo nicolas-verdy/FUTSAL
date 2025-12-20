@@ -75,8 +75,14 @@ st.dataframe(df.style.set_properties(**{'color': 'blue'}))
 # Insérer 10 lignes vides
 for _ in range(10):
     st.text("")
-
 st.title("***ARCHIVES***")
+st.write("     *****      ")
+st.write("**MERCREDI 17/12/25**")
+st.write("25    --> Cyril, Mano, Nico, Charles, Samir")
+st.write("à")
+st.write("20    --> Halim, Dodo, Yann, Madjid, Adrien")
+st.write("La vidéo du match :")
+st.write("https://drive.google.com/file/d/1KuAn05-xIeuKteDAch-V4NsqksaIYXR5/view?usp=sharing")
 st.write("     *****      ")
 st.write("**MERCREDI 10/12/25**")
 st.write("20    --> Cyril, Dodo, Romain, Alex, Adrien")
@@ -170,6 +176,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
