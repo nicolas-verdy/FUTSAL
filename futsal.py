@@ -12,29 +12,28 @@ cursor.execute("CREATE TABLE IF NOT EXISTS joueurs (nom TEXT UNIQUE)")
 conn.commit()
 
 # Affichage de l'image en bandeau et en arrière-plan
-st.markdown("""
-    <style>
-        .title {
-            background-image: url('https://laurafoot.fff.fr/wp-content/uploads/sites/10/2021/01/Bandeau_SiteWeb-Futsal.png');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 60px;
-            font-size: 40px;
-            text-align: center;
-            font-weight: bold;
-            border-radius: 10px;
-        }
-        .blue-title {
-            color: blue;
-            font-size: 24px;
-            font-weight: bold;
-        }
-       
-    </style>
-    <div class="title">
+components.html("""
+<style>
+.banner {
+    background-image: url('https://laurafoot.fff.fr/wp-content/uploads/sites/10/2021/01/Bandeau_SiteWeb-Futsal.png');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+</style>
+
+<div class="banner">
     ⚽ FUTSAL DU MERCREDI ⚽
-    </div>
+</div>
+""", height=220)
 """, unsafe_allow_html=True)
 
 st.title("⚽ Les Footix ⚽")
@@ -189,6 +188,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
