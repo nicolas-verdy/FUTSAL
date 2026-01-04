@@ -19,7 +19,7 @@ st.markdown("""
             background-size: cover;
             background-position: center;
             color: white;
-            padding: 50px;
+            padding-top: 4rem;
             font-size: 40px;
             text-align: center;
             font-weight: bold;
@@ -190,6 +190,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
