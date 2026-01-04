@@ -30,10 +30,7 @@ st.markdown("""
             font-size: 24px;
             font-weight: bold;
         }
-        body {
-            background: url('https://img.freepik.com/vecteurs-libre/fond-football-abstrait-realiste_52683-67579.jpg') no-repeat center center fixed;
-            background-size: cover;         
-        }
+       
     </style>
     <div class="title"></div>
 """, unsafe_allow_html=True)
@@ -190,6 +187,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
