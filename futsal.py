@@ -15,8 +15,8 @@ conn.commit()
 st.markdown("""
     <style>
         .title {
-            # background-image: url('https://laurafoot.fff.fr/wp-content/uploads/sites/10/2021/01/Bandeau_SiteWeb-Futsal.png');
-            background-image: IMG_9905.jpg ;
+            background-image: url('https://laurafoot.fff.fr/wp-content/uploads/sites/10/2021/01/Bandeau_SiteWeb-Futsal.png');
+            # background-image: IMG_9905.jpg ;
             background-size: cover;
             background-position: center;
             color: white;
@@ -191,6 +191,7 @@ conn.close()
 
 
 #  streamlit run futsal.py
+
 
 
 
