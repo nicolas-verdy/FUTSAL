@@ -1,7 +1,9 @@
 import streamlit as st
 import sqlite3
 import pandas as pd
-import streamlit.components.v1 as components
+
+# Config page
+st.set_page_config(layout="wide")
 
 # Connexion à la base SQLite
 conn = sqlite3.connect("joueurs.db", check_same_thread=False)
@@ -11,10 +13,7 @@ cursor = conn.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS joueurs (nom TEXT UNIQUE)")
 conn.commit()
 
-# Affichage de l'image en bandeau et en arrière-plan
-
-st.set_page_config(layout="wide")
-
+# ------------------ BANDEAU ------------------
 st.markdown("""
 <style>
 .banner {
@@ -31,6 +30,11 @@ st.markdown("""
     font-weight: bold;
     border-radius: 10px;
 }
+.blue-title {
+    color: blue;
+    font-weight: bold;
+    font-size: 20px;
+}
 </style>
 
 <div class="banner">
@@ -38,21 +42,24 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-
 st.title("⚽ Les Footix ⚽")
 st.title("RDV=20H      KickOff=20h15")
 
+# ------------------ FONCTIONS ------------------
+def get_joueurs():
+    cursor.execute("SELECT nom FROM joueurs")
+    return [row[0] for row in cursor.fetchall()]
 
-# Vérification du nombre de joueurs inscrits
-cursor.execute("SELECT nom FROM joueurs")
-joueurs = [row[0] for row in cursor.fetchall()]
+def afficher_joueurs(joueurs):
+    df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
+    st.dataframe(df_joueurs.style.set_properties(**{'color': 'blue'}))
+
+# ------------------ INSCRIPTION ------------------
 nombre_max = 10
+joueurs = get_joueurs()
 places_restantes = nombre_max - len(joueurs)
-
-# Affichage du nombre de places restantes
 st.markdown(f"## 🏆 Places : {places_restantes} / {nombre_max}")
 
-# Formulaire d'inscription
 nom = st.text_input("Votre nom")
 if st.button("S'inscrire"):
     if nom:
@@ -65,106 +72,33 @@ if st.button("S'inscrire"):
                 st.warning("Ce joueur est déjà inscrit !")
         else:
             st.error("Le nombre maximum de joueurs est atteint !")
+    # Rafraîchir la liste après inscription
+    joueurs = get_joueurs()
 
-# Affichage des joueurs inscrits avec indexation à partir de 1
 st.markdown("<div class='blue-title'>Joueurs inscrits :</div>", unsafe_allow_html=True)
+afficher_joueurs(joueurs)
 
-df_joueurs = pd.DataFrame({'#': range(1, len(joueurs) + 1), 'Nom': joueurs})
-df = df_joueurs[['#', 'Nom']]
-st.dataframe(df.style.set_properties(**{'color': 'blue'}))
-
-# Insérer 10 lignes vides
-for _ in range(10):
-    st.text("")
+# ------------------ ARCHIVES ------------------
 st.title("***ARCHIVES***")
-st.write("     *****      ")
+st.write("*****")
 st.write("**MARDI 30/12/25**")
 st.write("20    --> Tanguy, Stef, Madjid, Mehdy, Yann")
 st.write("à")
 st.write("11    --> Mano, Charles, Guillaume, Cyril, Adrien")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1OtOEvUW2MweI7F1t8iNcMm62n2ucxLC5/view?usp=sharing")
-st.write("     *****      ")
-st.write("**MARDI 23/12/25**")
-st.write("25    --> Yann, Mano, Nico, Charles, Stef")
-st.write("à")
-st.write("21    --> Zak, Zak2, Tanguy, Madjid, Romain")
-st.write("La vidéo du match :")
-st.write("PAS DE VIDEO")
-st.write("     *****      ")
-st.write("**MERCREDI 17/12/25**")
-st.write("25    --> Cyril, Mano, Nico, Charles, Samir")
-st.write("à")
-st.write("20    --> Halim, Dodo, Yann, Madjid, Adrien")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1KuAn05-xIeuKteDAch-V4NsqksaIYXR5/view?usp=sharing")
-st.write("     *****      ")
-st.write("**MERCREDI 10/12/25**")
-st.write("20    --> Cyril, Dodo, Romain, Alex, Adrien")
-st.write("à")
-st.write("17    --> Guillaume, Stef, Yann, Patrick, Mano")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1pBS2hhTKLOtds7JmR49lDLpbXRnvcNBU/view?usp=sharing")
-st.write("     *****      ")
-st.write("**MERCREDI 03/12/25**")
-st.write("18    --> Mano, Dodo, Romain, Nico, Guillaume")
-st.write("à")
-st.write("13    --> Gianni, Alex, Charles, Yann, Adrien")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1is_dv6tUI2INMxzJjSN6r9FJMPJSMxJb/view?usp=drive_link")
-st.write("     *****      ")
-st.write("**MERCREDI 26/11/25**")
-st.write("XXX Foot annulé XXX  - 4 inscrits")
-st.write("Mano, Romain, Dodo, Raphaël")
-st.write("     *****      ")
-st.write("**MERCREDI 19/11/25**")
-st.write("26    --> Mano, Nico, Romain, Yann, Stef")
-st.write("à")
-st.write("16    --> Madjid, Alex, Fabien, Charles, Cyril")
-st.write("La vidéo du match :")
-st.write("PAS DE VIDEO")
-st.write("     *****      ")
-st.write("**MERCREDI 12/11/25**")
-st.write("18    --> Mano, Dodo, Romain, Charles, Coco")
-st.write("à")
-st.write("20    --> Madjid, Sylvain, Fabien, Yann, Cyril")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1v7vyhCAKfQnqoDtWZLNI-5EZvkZfwhFc/view?usp=drive_link")
-st.write("     *****      ")
-st.write("**MERCREDI 05/11/25**")
-st.write("30    --> Mano, Stef, Yann, Charles, Carlos")
-st.write("à")
-st.write("18    --> Romain, Dodo, Nico, Zak, Alex")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1j7aeRAz9jBo7EgzVZV0x8yDjF-Z_jxab/view?usp=drive_link")
-st.write("     *****      ")
-st.write("**MERCREDI 29/10/25**")
-st.write("14    --> Zak, Stef, Dodo, Madjid, Guillaume")
-st.write("à")
-st.write("20    --> Vince, Mano, Nico, Yann, Halim")
-st.write("La vidéo du match :")
-st.write("https://drive.google.com/file/d/1kiYVeHeHcM9f9APMmckF2wcND8qOtQx8/view?usp=sharing")
-st.write("     *****      ")
-st.write(" ")
+st.write("La vidéo du match : https://drive.google.com/file/d/1OtOEvUW2MweI7F1t8iNcMm62n2ucxLC5/view?usp=sharing")
+st.write("*****")
+# (tu peux garder toutes tes archives ici)
 
-
-# Affichage de l'adresse
+# ------------------ CARTE ------------------
 adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
 st.markdown(f"### Adresse : {adresse}")
 
-# Affichage de la carte Google Maps via iframe (avec l'adresse exacte)
 map_iframe = """
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4335253054123!2d3.1225587763705196!3d50.63979287371289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c329dfdbd2b16b%3A0xd255ea458f438532!2s8%20Rue%20du%20Frenelet%2C%2059650%20Villeneuve-d'Ascq!5e1!3m2!1sfr!2sfr!4v1742461795759!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 """
+st.components.v1.html(map_iframe, height=500)
 
-# Affichage de la carte dans Streamlit
-components.html(map_iframe, height=500)
-
-# Insérer 3 lignes vides
-for _ in range(3):
-    st.text("")
-
-# Suppression d'un joueur (réservé à l'organisateur avec mot de passe)
+# ------------------ SUPPRESSION ------------------
 st.write("### Supprimer un joueur (Organisateur uniquement)")
 joueur_a_supprimer = st.selectbox("Sélectionner un joueur", [""] + joueurs)
 password = st.text_input("Mot de passe", type="password")
@@ -173,76 +107,20 @@ if st.button("Supprimer"):
         cursor.execute("DELETE FROM joueurs WHERE nom = ?", (joueur_a_supprimer,))
         conn.commit()
         st.success(f"{joueur_a_supprimer} a été supprimé !")
+        joueurs = get_joueurs()  # Rafraîchir la liste
     elif password != "Jules2014":
         st.error("Mot de passe incorrect")
 
-# Réinitialisation de la session avec mot de passe
+# ------------------ RÉINITIALISATION ------------------
 password_reset = st.text_input("Mot de passe pour réinitialiser", type="password")
 if st.button("Réinitialiser la session"):
     if password_reset == "Jules2014":
         cursor.execute("DELETE FROM joueurs")
         conn.commit()
         st.success("Nouvelle session démarrée, toutes les inscriptions ont été réinitialisées.")
+        joueurs = get_joueurs()  # Rafraîchir la liste
     else:
         st.error("Mot de passe incorrect")
 
 # Fermeture de la connexion
 conn.close()
-
-
-#  streamlit run futsal.py
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
