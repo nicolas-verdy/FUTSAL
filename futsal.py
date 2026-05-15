@@ -17,7 +17,7 @@ conn.commit()
 st.markdown("""
 <style>
 .banner {
-    background-image: url("https://laurafoot.fff.fr/wp-content/uploads/sites/10/2021/01/Bandeau_SiteWeb-Futsal.png");
+    background-image: url("https://www.kickfootball.net/wp-content/uploads/2025/09/Coupe-du-Monde-2026.webp");
     background-size: cover;
     background-position: center;
     height: 220px;
