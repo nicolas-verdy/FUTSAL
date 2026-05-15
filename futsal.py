@@ -38,7 +38,7 @@ st.markdown("""
 </style>
 
 <div class="banner">
-⚽ FUTSAL DU MERCREDI ⚽
+ 
 </div>
 """, unsafe_allow_html=True)
 
