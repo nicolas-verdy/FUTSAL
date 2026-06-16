@@ -13,16 +13,8 @@ conn.commit()
 
 # Joueurs affichés par défaut au démarrage
 joueurs_defaut = [
-    "Bienvenue",
-    "les amis",
-    "bientôt",
-    "l'heure de",
-    "s'inscrire",
-    "pour le Futsal",
-    "de mercredi",
-    "alors patience",
-    "Bientôt le",
-    "GO FOOT !"
+    "Nico",
+    "Mano"
 ]
 
 # Initialisation automatique si la table est vide
