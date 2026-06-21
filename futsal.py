@@ -59,9 +59,9 @@ st.write("RDV = 20H      KickOff = 20H15")
 
 st.balloons()
 
-st.header("😭⚽💔 C'est la dernière à Futsal Frenelet 💔⚽😭")
-st.header("😢❤️ Venez soutenir notre Juju ❤️😢")
-st.header("🍖🔥 et profiter du Barbecue d'Adieu 🔥🍖")
+st.subheader("😭⚽💔 C'est la dernière à Futsal Frenelet 💔⚽😭")
+st.subheader("😢❤️ Venez soutenir notre Juju ❤️😢")
+st.subheader("🍖🔥 et profiter du Barbecue d'Adieu 🔥🍖")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
