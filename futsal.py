@@ -55,9 +55,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("⚽ Les Footix du Mercredi")
-st.title("RDV = 20H      KickOff = 20H15")
+st.write("RDV = 20H      KickOff = 20H15")
 
-st.write("C'est la dernière à Footsal Frenelet, venez profiter du barbecue d'Adieu  :o( ")
+st.title("C'est la dernière à Footsal Frenelet  :o( ")
+st.title("Venez soutenir notre Juju et profiter du barbecue d'Adieu  :o( ")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
