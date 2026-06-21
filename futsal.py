@@ -57,10 +57,19 @@ st.markdown("""
 st.title("⚽ Les Footix du Mercredi")
 st.write("RDV = 20H      KickOff = 20H15")
 
-st.title("⚽🏃‍♂️💨 C'est la dernière à Futsal Frenelet 😭💔")
+st.balloons()
 
-st.title("🎉🎊 Venez soutenir notre Juju ❤️")
-st.title("🍔🌭🔥 Et profiter du barbecue d'Adieu 🍖🥩🍻")
+st.markdown(
+    """
+    # ⚽😭 C'est la dernière à Futsal Frenelet 😭⚽
+
+    ## ❤️ Venez soutenir notre Juju ❤️
+
+    ## 🍔🌭🔥 Profiter du barbecue d'Adieu 🍖🥩🍻
+
+    ### 🎉⚽ Une dernière soirée entre amis ! ⚽🎉
+    """
+)
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
