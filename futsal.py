@@ -57,8 +57,10 @@ st.markdown("""
 st.title("⚽ Les Footix du Mercredi")
 st.write("RDV = 20H      KickOff = 20H15")
 
-st.title("C'est la dernière à Footsal Frenelet  :o( ")
-st.title("Venez soutenir notre Juju et profiter du barbecue d'Adieu  :o( ")
+st.title("⚽🏃‍♂️💨 C'est la dernière à Futsal Frenelet 😭💔")
+
+st.title("🎉🎊 Venez soutenir notre Juju ❤️")
+st.title("🍔🌭🔥 Et profiter du barbecue d'Adieu 🍖🥩🍻")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
@@ -174,6 +176,14 @@ if st.button("Réinitialiser la session"):
         st.rerun()
     else:
         st.error("Mot de passe incorrect")
+
+st.markdown(
+    """
+    🎁 **Accéder aux avantages du CSE :**
+
+    👉 [Cliquez ici pour vous connecter au CSE](https://www.csearssup.fr/com/login?back_url=%2Fcom%2Fhomepage)
+    """
+)
 
 # Fermeture de la connexion
 conn.close()
