@@ -112,6 +112,14 @@ st.dataframe(
     use_container_width=True
 )
 
+st.markdown(
+    """
+    🎁 **Accéder au site du CSE Auchan :**
+
+    👉 [Cliquez ici pour racheter des tickets](https://www.csearssup.fr/com/login?back_url=%2Fcom%2Fhomepage)
+    """
+)
+
 # Adresse
 adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
 st.markdown(f"### Adresse : {adresse}")
@@ -178,13 +186,7 @@ if st.button("Réinitialiser la session"):
     else:
         st.error("Mot de passe incorrect")
 
-st.markdown(
-    """
-    🎁 **Accéder aux avantages du CSE :**
 
-    👉 [Cliquez ici pour vous connecter au CSE](https://www.csearssup.fr/com/login?back_url=%2Fcom%2Fhomepage)
-    """
-)
 
 # Fermeture de la connexion
 conn.close()
