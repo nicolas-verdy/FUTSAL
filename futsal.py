@@ -13,8 +13,7 @@ conn.commit()
 
 # Joueurs affichés par défaut au démarrage
 joueurs_defaut = [
-    "Nico",
-    "Mano"
+    
 ]
 
 # Initialisation automatique si la table est vide
@@ -57,6 +56,8 @@ st.markdown("""
 
 st.title("⚽ Les Footix du Mercredi")
 st.title("RDV = 20H      KickOff = 20H15")
+
+st.title("C'est la dernière à Footsal Frenelet, venez profiter du barbecue d'Adieu  :o( ")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
