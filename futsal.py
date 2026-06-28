@@ -120,14 +120,7 @@ st.markdown(f"### Adresse : {adresse}")
 
 # Carte Google Maps
 map_iframe = """
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2520.4335253054123!2d3.1225587763705196!3d50.63979287371289!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c329dfdbd2b16b%3A0xd255ea458f438532!2s8%20Rue%20du%20Frenelet%2C%2059650%20Villeneuve-d'Ascq!5e1!3m2!1sfr!2sfr!4v1742461795759!5m2!1sfr!2sfr"
-width="600"
-height="450"
-style="border:0;"
-allowfullscreen=""
-loading="lazy"
-referrerpolicy="no-referrer-when-downgrade">
-</iframe>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5060.172826224468!2d3.143386276370774!3d50.644086273403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c329dfd59b0c5d%3A0x844c479c77c4ef2c!2sFootsal%20Cousinerie!5e0!3m2!1sfr!2sfr!4v1782654689765!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 """
 
 components.html(map_iframe, height=500)
