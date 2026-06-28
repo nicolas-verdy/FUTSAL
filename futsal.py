@@ -63,6 +63,7 @@ st.markdown("""
 
 st.title("⚽ Les Footix du Mardi en Juillet")
 st.subheader("RDV = 20H15      KickOff = 20H30")
+st.subheader("  ")
 
 # attention :  nouveau jour ::!!!!
 st.markdown(
@@ -78,6 +79,8 @@ st.markdown(
 st.markdown(
     "<div class='red-title'>Nouveau Lieu --> Cousinerie (voir ci dessous) </div>",
     unsafe_allow_html=True      )
+
+st.subheader("  ")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
