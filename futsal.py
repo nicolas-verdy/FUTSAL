@@ -54,14 +54,8 @@ st.markdown("""
     <div class="title"></div>
 """, unsafe_allow_html=True)
 
-st.title("⚽ Les Footix du Mercredi")
-st.write("RDV = 20H      KickOff = 20H15")
-
-st.balloons()
-
-st.subheader("😭⚽💔 C'est la dernière à Futsal Frenelet 💔⚽😭")
-st.subheader("😢❤️ Venez soutenir notre Juju ❤️😢")
-st.subheader("🍖🔥 et profiter du Barbecue d'Adieu 🔥🍖")
+st.title("⚽ Les Footix du Mardi en Juillet")
+st.subheader("RDV = 20H15      KickOff = 20H30")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
