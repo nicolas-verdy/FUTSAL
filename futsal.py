@@ -108,7 +108,7 @@ st.dataframe(
 
 st.markdown(
     """
-    🎁 **Accéder au site du CSE Auchan :**
+    🎁 **Pour les employés AUCHAN, accédez ici au site du CSE Auchan :**
 
     👉 [Cliquez ici pour racheter des tickets](https://www.csearssup.fr/com/login?back_url=%2Fcom%2Fhomepage)
     """
