@@ -76,7 +76,7 @@ st.markdown(
 
 # attention :  nouveau lieu ::!!!!
 st.markdown(
-    "<div class='red-title'>Nouveau Lieu --> Cousinerie </div>",
+    "<div class='red-title'>Nouveau Lieu --> Cousinerie (voir ci dessous) </div>",
     unsafe_allow_html=True      )
 
 # Lecture des joueurs
