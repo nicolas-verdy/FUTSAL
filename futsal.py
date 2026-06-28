@@ -58,7 +58,7 @@ st.title("⚽ Les Footix du Mardi en Juillet")
 st.subheader("RDV = 20H15      KickOff = 20H30")
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>ATTENTION Nouvel Horaire !! </div>",
+    "<div class='blue-title'>ATTENTION Nouvel Horaire !! </div>",
     unsafe_allow_html=True
 )
 
