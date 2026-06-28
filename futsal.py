@@ -66,7 +66,7 @@ st.subheader("RDV = 20H15      KickOff = 20H30")
 
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>Nouvel Horaire --> KickOff 20h30 RDV 20h15 (Yann16h:o)</div>",
+    "<div class='red-title'>Nouvel Horaire --> KickOff 20h30 RDV 20h15   (Yann rdv à 16h30 :o)</div>",
     unsafe_allow_html=True      )
 
 # attention :  nouvel horaire ::!!!!
