@@ -66,17 +66,17 @@ st.subheader("RDV = 20H15      KickOff = 20H30")
 
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>ATTENTION Nouvel Horaire --> KickOff 20h30 </div>",
+    "<div class='red-title'>Nouvel Horaire --> KickOff 20h30 Yann16h30</div>",
     unsafe_allow_html=True      )
 
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>ATTENTION Nouveau Jour --> Mardi </div>",
+    "<div class='red-title'>Nouveau Jour --> Mardi </div>",
     unsafe_allow_html=True      )
 
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>ATTENTION Nouveau Lieu --> Cousinerie </div>",
+    "<div class='red-title'>Nouveau Lieu --> Cousinerie </div>",
     unsafe_allow_html=True      )
 
 # Lecture des joueurs
