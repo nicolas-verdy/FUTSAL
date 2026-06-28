@@ -115,7 +115,7 @@ st.markdown(
 )
 
 # Adresse
-adresse = "8 Rue du Frenelet, 59650 Villeneuve-d'Ascq"
+adresse = "36 Rue de la Cousinerie, 59650 Villeneuve-d'Ascq"
 st.markdown(f"### Adresse : {adresse}")
 
 # Carte Google Maps
