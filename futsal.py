@@ -118,7 +118,7 @@ st.markdown(
 adresse = "36 Rue de la Cousinerie"
 codville = "59650 Villeneuve-d'Ascq"
 st.markdown(f"### Adresse : {adresse}")
-st.markdown(f"### Adresse : {codville}")
+st.markdown({codville})
 
 # Carte Google Maps
 map_iframe = """
