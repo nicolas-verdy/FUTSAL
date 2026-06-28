@@ -131,6 +131,8 @@ st.dataframe(
     use_container_width=True
 )
 
+st.subheader("  ")
+
 st.markdown(
     """
     🎁 **Pour les employés AUCHAN, accédez ici au site du CSE Auchan :**
@@ -138,6 +140,7 @@ st.markdown(
     👉 [Cliquez ici pour racheter des tickets](https://www.csearssup.fr/com/login?back_url=%2Fcom%2Fhomepage)
     """
 )
+st.subheader("  ")
 
 st.header("Adresse : ")
 
