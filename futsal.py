@@ -49,10 +49,9 @@ st.markdown("""
 
         .red-title {
             color: red !important;
-            font-size: 40px;
+            font-size: 30px;
             font-weight: bold;
-            text-align: center;
-}
+        }
         
         body {
             background: url('https://img.freepik.com/vecteurs-libre/fond-football-abstrait-realiste_52683-67579.jpg') no-repeat center center fixed;
@@ -72,7 +71,7 @@ st.markdown(
 
 # attention :  nouvel horaire ::!!!!
 st.markdown(
-    "<div class='red-title'>ATTENTION Nouveau jour !! </div>",
+    "<div class='red-title'>ATTENTION Nouveau Jour !! </div>",
     unsafe_allow_html=True      )
 
 # attention :  nouvel horaire ::!!!!
