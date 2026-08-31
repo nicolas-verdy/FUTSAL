@@ -62,8 +62,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.title("⚽ Les Footix du Mardi en Septembre aussi finalement ...")
-st.subheader("RDV = 20H00      KickOff = 20H15")
-
+st.subheader("RDV = 20H00")
+st.subheader("KickOff = 20H15")
 
 # Lecture des joueurs
 cursor.execute("SELECT nom FROM joueurs")
