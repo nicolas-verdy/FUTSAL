@@ -65,20 +65,6 @@ st.title("⚽ Les Footix du Mardi en Septembre aussi finalement ...")
 st.subheader("RDV = 20H00      KickOff = 20H15")
 st.subheader("  ")
 
-# attention :  nouveau jour ::!!!!
-st.markdown(
-    "<div class='red-title'>Nouveau Jour --> Le Mardi pour tout juillet</div>",
-    unsafe_allow_html=True      )
-
-# attention :  nouvel horaire ::!!!!
-st.markdown(
-    "<div class='red-title'>Nouvel Horaire --> KickOff 20h30 / RDV 20h15</div>",
-    unsafe_allow_html=True      )
-
-# attention :  nouveau lieu ::!!!!
-st.markdown(
-    "<div class='red-title'>Nouveau Lieu --> Cousinerie (voir ci dessous) </div>",
-    unsafe_allow_html=True      )
 
 st.subheader("  ")
 
